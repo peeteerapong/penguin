@@ -19,13 +19,47 @@
             width: 1000%;
             height: auto;
             }
+            
+            .table-row-color{
+                background-color: pink;
+            }
 
     </style>
 </head>
 <body>
     <div class="container">
-        <a href="/views/index.jade"></a>
+        <button><a href="/views/index.jade"></a>  Home  </button>
         
+    
+    </div>
+
+    <div class = "container">
+      <a href='/views/ingredient.jade'>
+         Mint------
+        </a>
+      <a href='/views/menu.jade'>
+         Aof-------</a>
+      <a href='/views/cashier.jade'> Pop--------</a>
+        
+        
+      <a href='/views/order.jade'> PPorder-----</a>
+        
+        
+      <a href='/views/delivery.jade'>  PPdelivery-----</a>
+       
+    </div>
+
+    <div id="container"> 
+        <table border="1" width = "50%" height="50%">
+            <tr class="table-row-color">
+                <th> รหัส  </th> <th> วัน/เวลา   </th> <th> รายการคำสั่งซื้อ  </th>
+                <th> จำนวน  </th>    <th> สถานะ   </th>  <th> เลือก   </th>
+            </tr>
+            <tr>    
+                <td>    </td>   <td>    </td>   <td>    </td>   <td></td>
+                <td>   </td>    <td>    </td>
+            </tr>
+        </table>    
     </div>
 </body>
 </html>
