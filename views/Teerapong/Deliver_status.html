@@ -33,9 +33,19 @@
             border-right: 2px solid pink;
             padding: 30px;
         }
+        
+        #table{
+            width: 25px;
+            height: 30px;
             
+        }
+        p{
+            margin-left: 6cm;
+        }
+        
         .table-row-color{
-                background-color: pink;
+                background-color:black;
+                color: white;
         }
         
         .dropbtn {
@@ -76,12 +86,7 @@
         .big{
             width: 0.6cm; height: 0.6cm;
         }
-        .button{
-            background-color:black ;
-            color: white;
-            margin-left: 20cm;
 
-        }
         #container {
             display: flex;
             justify-content: center;
@@ -109,19 +114,33 @@
     </div>
 
     <div id="container" class="pad"> 
-        <table border="1" width = "50%" height="50%">
-            <tr class="table-row-color">
-                <th> รหัส  </th> <th> วัน/เวลา   </th> <th> รายการคำสั่งซื้อ  </th>
-                <th> จำนวน  </th>    <th> สถานะ   </th>  <th> เลือก   </th>
-            </tr>
-            <tr>    
-                <td> 001   </td>   <td>    </td>   <td>    </td>   <td></td>
-                <td>   </td>    <td> <input type="radio" class="big">   </td>
-            </tr>
-        </table>    
-         
+       <table class="table" border="5%"  >  
+        <tr class="table-row-color">   
+            <th><td>    
+                <p>รหัสคำสั่งซื้อ</p>  
+                <p>ชื่อผู้สั่ง :  </p>
+                <p>ที่อยู่ : </p>
+                <p> รายการ : </p>
+                <p>ค่าจัดส่ง : </p>
+                <p>รวมราคา</p>
+                </td>
+            </th> 
+            
+            
+            <th> 
+                <p> เช็คสถานะคำสั่งซื้อ</p> 
+            
+            
+            
+            </th>
+        </tr>
+
+       </table>
     </div>
-    <br>
-   <a href="/views/Teerapong/Deliver_status.html"> <button class="button" >  ยืนยัน  </button> </a>
+
+    
+
+
+</div>
 </body>
 </html>
