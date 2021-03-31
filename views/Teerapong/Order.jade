@@ -84,47 +84,35 @@ html(lang='en')
       width: 10%;
       border-radius: 15%;
       }
+      .button-2{
+      background-color: white;
+      margin-top: 7%;
+      margin-bottom: 5%;
+      margin-left: 2cm;
+      border-radius: 15%;
+      }
       #container {
       display: flex;
       justify-content: center;
       }
-      #myModal{
-      max-width: 1000%;
-      }
       .modal-content{
       background-color: black;
       color: white;
+      max-width: 10000px;
       }
-      .modal-body{
+      .modal-title{
+      margin-left: 5cm;
+      }
+      .modal-header{
       display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      width: 100%;
+      flex-direction: column;
       }
-      .table-row{
-      border-collapse: separate;
-      border-spacing: 10px;
-      }
-      .table-row td{
-      padding-left: 15px;
-      }
-      .button-2{
-      background-color: wheat;
-      }
-      .button-2.active{
-      background-color: yellow;
-      }
-      .button-3{
-      margin-top: 1cm;
-      margin-left: 1cm;
-      background-color: pink;
-      border-radius: 15%;
-      }
-      .button-3:hover{
-      background-color: green;
+      .modal-footer{
+      display: flex;
+      justify-content: center;
       }
   body
-    .background    
+    .background
     button
       a(href='/views/index.jade')
       |   Home
@@ -186,57 +174,28 @@ html(lang='en')
       .modal-dialog
         // Modal content
         .modal-content
+          .modal-header
+            h4.modal-title คำสั่งซื้อ
+            br
+            table(style='margin-left: 15%;' width='100%' height='50%')
+              tbody
+                tr
+                  th รหัส
+                  th  รายการคำสั่งซื้อ
           .modal-body
-            div
-              div
-                h4  รหัสคำสั่งซื้อ  
-              div
-                table.table-row(width='100%' height='50%')
-                  tbody
-                    tr
-                      td ชื่อผู้สั่ง   
-                      td : Penguin   
-                    tr
-                      td  ที่อยู่  
-                      td : ขั้วโลกเหนือ    
-                    tr
-                      td รายการ 
-                      td
-                        | : Waffle, Blueberry
-                        br
-                        |                                     จำนวน 1 รายการ
-                    tr
-                      td  ค่าจัดส่ง 
-                      td : 5/Bath    
-                    tr
-                      td  รวมราคา 
-                      td : 135/Bath    
-            div
-              div
-                h4 เช็คสถานะการจัดส่ง  
-              div
-                table
-                  tbody
-                    tr
-                      td    
-                      td
-                        button.button-2(style=' width: 70px; height: auto; border-radius: 50%;')
-                          img(style='width: 100%;' src='/views/Teerapong/img/horder.png')
-                      td     
-                    tr
-                      td
-                        button.button-2(style=' width: 70px; height: auto; border-radius: 50%;')
-                          img(style='width: 100%;' src='/views/Teerapong/img/Cooking.png')
-                      td      
-                      td
-                        button.button-2(style=' width: 70px; height: auto; border-radius: 50%;')
-                          img(style='width: 100%;' src='/views/Teerapong/img/delivery__bag__food__hand_-512.png')
-                button.button-3(type='button' data-dismiss='modal') ยืนยันการจัดส่ง
-    script.
-      $('body').on('click','.button-2',function(){
-      if ($(this).hasClass('active')) {
-      $(this).removeClass('active')
-      } else {
-      $(this).addClass('active')
-      }
-      })
+            table(style='margin-left: 15%;' width='100%' height='50%')
+              tbody
+                tr
+                  td  001  
+                  td
+                    | Waffle 
+                    br
+                    |  Blue Berry
+          .modal-footer
+            table(width='70%' height='50%')
+              tbody
+                tr
+                  td  จำนวน 
+                  td  1 รายการ
+            button.button-2(data-dismiss='modal') เสร็จสิ้น
+            button.button-2(data-dismiss='modal')  ยกเลิก 

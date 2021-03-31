@@ -12,10 +12,17 @@
 
     <style media="screen">
          html{
-            background: url(https://i.pinimg.com/originals/61/88/8f/61888f867b9f09bd8b4631bbcf3dc971.jpg) no-repeat center fixed;
-            background-size: 1540px 762px;
+            
             margin: 0;
             padding: 0;
+         }
+         .background{
+            background: url(https://i.pinimg.com/originals/61/88/8f/61888f867b9f09bd8b4631bbcf3dc971.jpg) no-repeat center fixed;
+            background-size: 1540px 762px;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            z-index: -999999999;
          }
             .container {
             position: relative;
@@ -33,8 +40,16 @@
             border-left: 2px solid pink;
             border-right: 2px solid pink;
             padding: 30px;
+            background-color: wheat;
         }
+        
+        .table{
+            display: flex;
+            justify-content: center;
+            background-color: white;
             
+        }
+
         .table-row-color{
                 background-color: pink;
         }
@@ -134,7 +149,7 @@
     </style>
 </head>
 <body>
-    
+    <div class="background">   </div>
     <button><a href="/views/index.jade"></a>  Home  </button>
     <div class = "dropdown">
        
@@ -154,15 +169,27 @@
     </div>
 
     <div id="container" class="pad"> 
-        <table border="1" width = "50%" height="50%">
+        <table class="table" border="1" width = "50%" height="50%">
             <tr class="table-row-color">
                 <th> รหัส  </th> <th> วัน/เวลา   </th> <th> รายการคำสั่งซื้อ  </th>
                 <th> จำนวน  </th>    <th> สถานะ   </th>  <th> เลือก   </th>
-            </tr>
-            <tr>    
-                <td> 001   </td>   <td>    </td>   <td>    </td>   <td></td>
-                <td>   </td>    <td> <input type="radio" class="big">   </td>
-            </tr>
+                <tr>    
+                    <td>001    </td>   <td> 12/02/64  09:20:01   </td>   <td>  Waffle,Blueberry +5 ,ค่าจัดส่ง 5  </td>   
+                    <td>   1 </td>   <td> Deliver  </td>    <td><input type="checkbox" class="big" >   </td>
+                </tr>
+    
+                <tr>    
+                    <td>002    </td>   <td> 12/02/64  09:24:05   </td>   <td>  Cake,Ice-cream +10  </td>   
+                    <td>   2 </td>   <td>Take Home  </td>    <td><input  type="checkbox" class="big" >   </td>
+                </tr>
+                <tr>    
+                    <td>003    </td>   <td> 12/02/64  09:24:05   </td>   <td>  Macaroons </td>   
+                    <td>   2 </td>   <td> Seat  </td>    <td><input  type="checkbox" class="big" >   </td>
+                </tr>
+                <tr>    
+                    <td>004    </td>   <td> 12/02/64  09:24:05   </td>   <td>  Pie,  ค่าจัดส่ง10 </td>   
+                    <td>   2 </td>   <td> Deliver  </td>    <td><input  type="checkbox" class="big" >   </td>
+                </tr>
         </table>    
          
     </div>
