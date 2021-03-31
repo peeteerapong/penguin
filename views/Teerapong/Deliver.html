@@ -8,7 +8,8 @@
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css' integrity='sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l' crossorigin='anonymous'>
     <script src='https://code.jquery.com/jquery-3.5.1.slim.min.js' integrity='sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj' crossorigin='anonymous'></script>
     <script src='https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js' integrity='sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns' crossorigin='anonymous'></script>
-    <script (src='https://kit.fontawesome.com/9f82b43210.js' crossorigin='anonymous'></script>
+    <script src='https://kit.fontawesome.com/9f82b43210.js' crossorigin='anonymous'></script>
+
     <style media="screen">
          html{
             background: url(https://i.pinimg.com/originals/61/88/8f/61888f867b9f09bd8b4631bbcf3dc971.jpg) no-repeat center fixed;
@@ -79,12 +80,56 @@
         .button{
             background-color:black ;
             color: white;
-            margin-left: 20cm;
+            margin-left: 15cm;
+            width: 10%;
+            border-radius: 15%;
 
         }
         #container {
             display: flex;
             justify-content: center;
+        }
+
+        #myModal{
+            max-width: 1000%;
+        }
+
+        .modal-content{
+            background-color: black;
+            color: white;
+        }
+
+        .modal-body{
+           display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 100%;
+            
+        }
+        .table-row{
+            border-collapse: separate;
+            border-spacing: 10px;
+        }
+
+        .table-row td{
+            padding-left: 15px;
+        }
+        
+        .button-2{
+            background-color: wheat;
+        }
+        .button-2.active{
+            background-color: yellow;
+        }
+
+        .button-3{
+            margin-top: 1cm;
+            margin-left: 1cm;
+            background-color: pink;
+            border-radius: 15%;
+        }
+        .button-3:hover{
+            background-color: green;
         }
     </style>
 </head>
@@ -122,6 +167,80 @@
          
     </div>
     <br>
-   <a href="/views/Teerapong/Deliver_status.html"> <button class="button" >  ยืนยัน  </button> </a>
+
+    <button type="button" class="button" data-toggle="modal" data-target="#myModal">ยืนยัน</button>
+    <!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+  
+      <!-- Modal content-->
+      <div class="modal-content">
+       
+            <div class="modal-body">
+                <div >
+                    <div><h4> รหัสคำสั่งซื้อ  </h4>  </div>   
+                        <div>   
+                            <table width="100%" height="50%" class="table-row"> 
+                                <tr> <td>ชื่อผู้สั่ง   </td>   <td>: Penguin   </td> </tr>
+                                <tr> <td> ที่อยู่  </td>  <td>: ขั้วโลกเหนือ    </td> </tr>
+                                <tr>  <td>รายการ </td>  <td>: Waffle, Blueberry
+                                    <br>
+                                    จำนวน 1 รายการ
+                                </td>   </tr>
+                                <tr>  <td> ค่าจัดส่ง </td>  <td>: 5/Bath    </td>    </tr>
+                                <tr>  <td> รวมราคา </td>   <td>: 135/Bath    </td>   </tr>
+                            </table>
+                    </div>
+                
+            
+                </div>
+
+
+                <div > 
+                    <div><h4>เช็คสถานะการจัดส่ง  </h4>   </div>
+                    <div>  
+                        <table> 
+                            <tr> 
+                                <td>   </td>  
+
+                                <td> 
+                                    <button class="button-2" style=" width: 70px; height: auto; border-radius: 50%;"> <img style="width: 100%;" src="/views/Teerapong/img/horder.png"  > </button>
+                                </td>   
+
+                                <td>    </td>
+                            </tr>
+                            <tr> 
+                                <td> <button class="button-2" style=" width: 70px; height: auto; border-radius: 50%;"> <img style="width: 100%;" src="/views/Teerapong/img/Cooking.png"  > </button>  </td>  
+
+                                <td>     </td>   
+
+                                <td><button class ="button-2" style=" width: 70px; height: auto; border-radius: 50%;"> <img style="width: 100%;" src="/views/Teerapong/img/delivery__bag__food__hand_-512.png"  > </button>   </td>
+                            </tr>
+
+                        </table>
+                        
+                        <button type="button" class="button-3" data-dismiss="modal">ยืนยันการจัดส่ง</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $('body').on('click','.button-2',function(){
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active')
+            
+        } else {
+            $(this).addClass('active')
+            
+        }
+    })
+</script>
 </body>
 </html>
